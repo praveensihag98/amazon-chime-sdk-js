@@ -31,6 +31,13 @@ jobs:
         - source script/travis-awscli-installation
         - integration/js/script/install-kite
       script: npm run test:integration-video
+    - stage: integ_video_simulcast
+      if: (type = pull_request) OR (type = push AND branch != master)
+      before_install: script/needs-integration-test || travis_terminate 0
+      install:
+        - source script/travis-awscli-installation
+        - integration/js/script/install-kite
+      script: npm run test:integration-video-simulcast
     - stage: integ_meeting_quit
       if: (type = pull_request) OR (type = push AND branch != master)
       before_install: script/needs-integration-test || travis_terminate 0

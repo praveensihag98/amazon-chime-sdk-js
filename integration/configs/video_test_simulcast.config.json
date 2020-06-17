@@ -1,0 +1,26 @@
+{
+  "`": 1,
+  "name": "video_test_simulcast.config.json %ts",
+  "grids": [
+  ],
+  "tests": [
+    {
+      "name": "Video Test %ts",
+      "description": "Video Test Simulcast",
+      "tupleSize": 2,
+      "noOfThreads": 1,
+      "testImpl": "VideoTestSimulcast.js",
+      "payload": {
+        "url": "http://localhost:8080/",
+        "retry": 2
+      }
+    }
+  ],
+  "clients": [
+    {
+      "browserName": "chrome",
+      "version": "83",
+      "platform": "MAC"
+    }
+  ]
+}

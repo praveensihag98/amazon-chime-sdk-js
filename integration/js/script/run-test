@@ -62,6 +62,12 @@ case $1 in
       r app_quit_audio_test.config.json
       r meeting_leave_audio_test.config.json
       ;;
+   video_simulcast)
+      r video_test_simulcast.config.json
+      r app_quit_video_test.config.json
+      r meeting_leave_video_test.config.json
+      r reconnection_test.config.json
+      ;;
    video)
       r video_test.config.json
       r app_quit_video_test.config.json
